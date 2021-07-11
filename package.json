@@ -1,0 +1,23 @@
+{
+  "name": "dils.blog",
+  "version": "1.0.0",
+  "description": "Dils Blog",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf public styles/main.css",
+    "dev": "npm run clean && postcss styles/tailwind.css > styles/main.css && eleventy --serve",
+    "build": "npm run clean && NODE_ENV=production postcss styles/tailwind.css > styles/main.css && eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.3.0",
+    "cssnano": "^5.0.6",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.2.4"
+  }
+}
